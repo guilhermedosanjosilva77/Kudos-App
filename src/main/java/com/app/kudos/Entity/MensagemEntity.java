@@ -1,6 +1,7 @@
 package com.app.kudos.Entity;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 import com.app.kudos.Enums.TipoMensagemEnum;
 

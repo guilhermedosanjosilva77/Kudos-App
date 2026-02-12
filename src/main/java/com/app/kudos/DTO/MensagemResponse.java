@@ -4,13 +4,14 @@ import java.util.Date;
 
 import com.app.kudos.Entity.MensagemEntity;
 
-public record MensagemResponse(String mensagem, Date dataEnvio, Long remetenteId, Long destinatarioId) {
+public record MensagemResponse(String mensagem, Date dataEnvio, Long remetenteId, Long destinatarioId, String tipoMensagem) {
     public MensagemResponse(MensagemEntity mensagemEntity) {
     this(
         mensagemEntity.getMensagem(),
         mensagemEntity.getDataEnvio(),
         mensagemEntity.getRemetente().getId(),
-        mensagemEntity.getDestinatario().getId()
+        mensagemEntity.getDestinatario().getId(),
+        mensagemEntity.getTipoMensagem().name()
 
     );
     }
